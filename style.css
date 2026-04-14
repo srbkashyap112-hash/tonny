@@ -1,0 +1,128 @@
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+/* ===== BACKGROUND (VISIBLE) ===== */
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:0; /* 🔑 DO NOT use -1 */
+  background:
+    linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+    url("assets/mob.png") center / cover no-repeat;
+}
+
+/* Desktop */
+@media (min-width:1024px){
+  .bg{
+    background:
+      linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+      url("assets/lap.png") center / cover no-repeat;
+  }
+}
+
+/* ===== POPUP OVERLAY ===== */
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:10; /* 🔑 ABOVE BACKGROUND */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.35);
+}
+
+/* ===== RACING POPUP ===== */
+.modal.racing{
+  width:92vw;
+  max-width:400px;
+  background:linear-gradient(180deg,#0c0c0f,#16161d);
+  border-radius:16px;
+  padding:26px 22px;
+  text-align:center;
+  color:#fff;
+  box-shadow:0 35px 90px rgba(0,0,0,.75);
+  animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(.95)}
+  to{opacity:1;transform:none}
+}
+
+/* Text */
+.modal h2{
+  margin:6px 0 6px;
+  font-size:24px;
+  font-weight:900;
+}
+
+.policy{
+  font-size:14px;
+  color:#d1d5db;
+  margin-bottom:16px;
+}
+
+.note{
+  font-size:13px;
+  color:#9ca3af;
+  margin-bottom:20px;
+}
+
+/* ===== 🌊 WAVE LOADER ===== */
+.wave-loader{
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  margin:18px 0 14px;
+}
+
+.wave-loader span{
+  width:6px;
+  height:28px;
+  background:linear-gradient(180deg,#e10600,#ffbf00);
+  border-radius:6px;
+  animation:wave 1.2s infinite ease-in-out;
+}
+
+.wave-loader span:nth-child(2){animation-delay:.1s}
+.wave-loader span:nth-child(3){animation-delay:.2s}
+.wave-loader span:nth-child(4){animation-delay:.3s}
+.wave-loader span:nth-child(5){animation-delay:.4s}
+
+@keyframes wave{
+  0%,100%{transform:scaleY(.4);opacity:.5}
+  50%{transform:scaleY(1);opacity:1}
+}
+
+/* Buttons */
+.actions{
+  display:flex;
+  gap:12px;
+}
+
+.btn{
+  flex:1;
+  padding:13px 0;
+  border-radius:12px;
+  font-weight:900;
+  border:none;
+  cursor:pointer;
+  text-transform:uppercase;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,#e10600,#b00500);
+  color:#fff;
+}
+
+.btn.secondary{
+  background:transparent;
+  border:1px solid #374151;
+  color:#e5e7eb;
+}

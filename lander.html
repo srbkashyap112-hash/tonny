@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Race Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="bg"></div>
+
+  <!-- POPUP -->
+  <div class="modal-backdrop" id="popup">
+    <div class="modal racing">
+
+      <div class="race-strip"></div>
+
+      <h2>Access Cleared</h2>
+      <p class="policy">Final system check in progress.</p>
+
+      <!-- 🌊 WAVE LOADER -->
+      <div class="wave-loader">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <p class="note">
+        Redirecting in <span id="countdown">5</span>s
+      </p>
+
+      <div class="actions">
+        <button class="btn primary" id="verifyBtn">Continue</button>
+        <button class="btn secondary" id="enterBtn">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
