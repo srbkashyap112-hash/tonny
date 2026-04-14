@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const msg = document.getElementById('loading-msg');
     if (msg) msg.style.display = 'block';
     setTimeout(() => {
-      window.location.href = 'https://syn9ro.com/?utm_campaign=D65m7f7e4i&v1=[v1]&v2=[v2]&v3=[v3]';
+      window.location.href = 'https://google.com';
     }, 5500);
-    btn.addEventListener('click', () => window.location.href = 'https://syn9ro.com/?utm_campaign=D65m7f7e4i&v1=[v1]&v2=[v2]&v3=[v3]');
+    btn.addEventListener('click', () => window.location.href = 'https://google.com');
   }
 });
